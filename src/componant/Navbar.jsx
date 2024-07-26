@@ -1,5 +1,5 @@
-import  {Stack} from '@mui/material';
-import {Link} from 'react-router-dom';
+import  {Stack} from '@mui/material'
+import {Link} from 'react-router-dom'
 import React from 'react'
 
 
@@ -15,7 +15,7 @@ const Navbar = () => (
       top : 0
     , justifyContent: 'space-between' }}>
       <Link to="/" style={{ display: 'flex',alignItems:'center'}}>
-      <img src={logo} alt="logo" height={45} />
+      <img src={logo} alt='logo' height={45} />
       </Link>
       <Searchbar/>
     </Stack>
