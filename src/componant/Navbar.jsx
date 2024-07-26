@@ -2,10 +2,12 @@ import  {Stack} from '@mui/material';
 import {Link} from '@mui/material';
 import React from 'react'
 
+
 import { logo } from '../utils/constants'
+import Searchbar  from './Searchbar';
 
 const Navbar = () => (
-    <stack 
+    <Stack 
     direction = "row" 
     alignItems="center"
     p={2}
@@ -15,7 +17,8 @@ const Navbar = () => (
       <Link to="/" style={{ display: 'flex',alignItems:'center'}}>
       <img src={logo} alt="logo" height={45} />
       </Link>
-    </stack>
+      <Searchbar/>
+    </Stack>
   )
 
 export default Navbar
