@@ -5,8 +5,9 @@ import Videos from './Videos';
 import {FetchFromAPI} from '../utils/FetchFromAPI';
 
 const Feed = () => {
-  const [selectedCategory, setselectedCategory] = useState('Home');
+  const [selectedCategory, setselectedCategory] = useState('New');
   useEffect(() =>{
+    //not understand
     FetchFromAPI(`video?part=snippet&q=${selectedCategory}`)
   },[selectedCategory])
   return (
@@ -14,7 +15,10 @@ const Feed = () => {
         <Box sx={{height: {
           sx: "auto", md: "92vh" 
         }, borderRight : '1px solid #3d3d3d', px:{sx : 0, md : 2 }}}>
-           <Sidebar/>
+           <Sidebar // not understand
+           selectedCategory={selectedCategory}
+           setselectedCategory={setselectedCategory}
+           />
 
            <Typography className = "copyright"
            //variant body2 is font style and mt = margintop
@@ -27,7 +31,7 @@ const Feed = () => {
         <Box p={2} sx={{ overflowY : 'auto', height : '90vh',flex:2}}>
           <Typography variant= "h4" fontWeight="bold"
           mb = {2} sx={{color : 'white'}} >
-            Home 
+            {selectedCategory} 
             <span style={{ color : '#F31503'}}> Videos</span>
           </Typography>
           <Videos videos={[]}/>
