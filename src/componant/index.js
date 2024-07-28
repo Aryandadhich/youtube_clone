@@ -7,4 +7,6 @@ export {default as SearchFeed} from './SearchFeed';
 export {default as VideoDetail} from './VideoDetail';
 export {default as Searchbar}  from './Searchbar';
 export {default as Sidebar} from './Sidebar.jsx';
-export {default as Videos} from './Videos.jsx'
+export {default as Videos} from './Videos.jsx';
+export {default as VideoCard} from './VideoCard';
+export {default as ChannelCard} from './ChannelCard';
