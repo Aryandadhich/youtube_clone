@@ -16,7 +16,7 @@ export const logo = 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
-  { name: 'Code with Aryan', icon: <CodeIcon />, },
+  { name: 'JS Mastery', icon: <CodeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
