@@ -5,11 +5,11 @@ import { FetchFromAPI } from '../utils/FetchFromAPI';
 
 const Feed = () => {
   const [selectedCategory, setselectedCategory] = useState('New');
-  const [videos , setVideos] = useState([]);
+  const [videos , setvideos] = useState([]);
 
   useEffect(() => {
     FetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-      .then((data) => setVideos(data.items))
+      .then((data) => setvideos(data.items))
   }, [selectedCategory]);
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -32,7 +32,7 @@ const Feed = () => {
         <Typography variant="h4" fontWeight="bold"
           mb={2} sx={{ color: 'white' }} >
           {selectedCategory}
-          <span style={{ color: '#FC1503' }}>videos</span>
+          <span style={{ color: '#FC1503' }}> videos</span>
         </Typography>
         <Videos videos={videos} />
       </Box>
