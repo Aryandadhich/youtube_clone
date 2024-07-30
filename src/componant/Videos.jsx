@@ -1,6 +1,6 @@
 import { Stack , Box } from '@mui/material'
 import React from 'react'
-import { ChannelCard, VideoCard } from "./";
+import { VideoCard, ChannelCard } from "./";
 
 const Videos = ({videos}) => {
   return (
@@ -16,4 +16,4 @@ const Videos = ({videos}) => {
   )
 }
 
-export default Videos
+export default Videos;

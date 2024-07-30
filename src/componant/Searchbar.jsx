@@ -8,18 +8,20 @@ const Searchbar = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) =>{
-  e.preventDefault();
+  const onhandleSubmit = (e) => {
+    e.preventDefault();
 
-  if(searchTerm){
-    navigate(`/search/${searchTerm}`);
-    setSearchTerm('');
+    if (searchTerm){
+       navigate(`/search/${searchTerm}`);
+
+       setSearchTerm('');
+    }
   }
-}
+
   return (
     <Paper
         component="form"
-        onSubmit={handleSubmit}
+        onSubmit={onhandleSubmit}
         sx={{
 
             backgroundRadius : 20,
