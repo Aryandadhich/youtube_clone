@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Paper , IconButton} from '@mui/material';
-import {Search} from '@mui/icons-material';
+import SearchIcon  from '@mui/icons-material/Search';
 
 const Searchbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,7 +30,7 @@ const Searchbar = () => {
             pl:3, //padding left
             pr:1,
             boxShadow : 'none',
-            mr :{ sm: 5 } //mr - margin right  , sm - small devides
+            mr :{ sm: 5 }, //mr - margin right  , sm - small devides
         }}
     >
         <input 
@@ -38,8 +38,8 @@ const Searchbar = () => {
         placeholder='Search...'
         value={searchTerm}
         onChange={(e) => {setSearchTerm(e.target.value)}}/>
-        <IconButton type="submit" sx={{p : '7px', color: 'Red'}}>
-            <Search />
+        <IconButton type="submit" sx={{p : '10px', color: 'Red'}}>
+            <SearchIcon />
         </IconButton>
       
     </Paper>
