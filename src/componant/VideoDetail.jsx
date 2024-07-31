@@ -3,7 +3,7 @@ import{ Link , useParams} from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import {Typography , Box , Stack} from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
-import Video, { ChannelCard, ChannelDetail } from './';
+import { Videos } from './';
 import { FetchFromAPI } from '../utils/FetchFromAPI';
 
 const VideoDetail = () => {
@@ -28,7 +28,7 @@ const VideoDetail = () => {
     <Box minHeight="95vh">
       <Stack direction={{ xs: 'column', md: 'row'}}>
         <Box flex={1}>
-          <Box  sx={{ width: '100%', position:'sticky', top:'86px'}}>
+          <Box  sx={{ width: '100%', position:'-webkit-sticky', top:'70px'}}>
           <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`}
           className="react-player" controls/>
           <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
@@ -43,18 +43,21 @@ const VideoDetail = () => {
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography variant="body1" sx={{ opacity: 0.8 }}>
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography variant="body1" sx={{ opacity: 0.8 }}>
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
                 </Stack> 
             </Stack>
           </Box>
           </Box>
-          </Stack>
+          <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
+          <Videos videos={videos} direction="column"/>
           </Box>
+      </Stack>
+  </Box>
   )
 }
 
